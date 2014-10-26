@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ic.googletelus" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<uses-permission android:name="com.google.android.glass.permission.DEVELOPMENT" />
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/tt"
+        android:label="@string/app_name" >
+        <activity
+            android:name="com.ic.googletelus.InitActivity"
+            android:icon="@drawable/tt"
+            android:label="@string/start_helloglass" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+				<action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data android:name="com.google.android.glass.VoiceTrigger"
+            android:resource="@xml/voice_trigger" />
+
+        </activity>
+      
+        <activity
+            android:name="AvailableLocations"
+            android:label="@string/title_activity_available_locations" >
+        </activity>
+        
+        <activity
+            android:name="NavActivity"
+            android:label="@string/title_activity_nav" >
+        </activity>
+        
+         <activity
+            android:name="TellMore"
+            android:label="@string/title_activity_tell_more" >
+        </activity>
+        
+         <activity
+            android:name="Timings"
+            android:label="@string/title_activity_timings" >
+        </activity>
+        
+         <activity
+            android:name="StoreDetails"
+            android:label="@string/title_activity_details" >
+        </activity>
+        
+    </application>
+
+</manifest>
